@@ -12,7 +12,7 @@ interface IProps {
 
 const Home = ({ videos }: IProps) => {
   return (
-    <div className="flex flex-col gap-10 videos h-full ">
+    <div className="flex flex-col gap-10 videos h-full text-white">
       {videos.length ? (
         videos?.map((video: Video) => (
           <VideoCard post={video} isShowingOnHome key={video._id} />
@@ -32,7 +32,6 @@ export const getServerSideProps = async ({
   query: { topic: string };
 }) => {
   let response = await axios.get(`${BASE_URL}/api/post`);
-  console.log('s', response.data);
   if (topic) {
     response = await axios.get(`${BASE_URL}/api/discover/${topic}`);
   }

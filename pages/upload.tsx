@@ -30,8 +30,6 @@ const Upload = () => {
   const uploadVideo = async (e: any) => {
     const selectedFile = e.target.files[0];
     const fileTypes = ['video/mp4', 'video/webm', 'video/ogg'];
-    console.log('selectedFile', selectedFile);
-    // uploading asset to sanity
     if (fileTypes.includes(selectedFile.type)) {
       setWrongFileType(false);
       setLoading(true);
@@ -85,6 +83,7 @@ const Upload = () => {
     setVideoAsset(undefined);
     setCaption('');
     setTopic('');
+    router.push('/');
   };
 
   return (
@@ -151,7 +150,7 @@ const Upload = () => {
           </div>
           {wrongFileType && (
             <p className="text-center text-xl text-red-400 font-semibold mt-4 w-[260px]">
-              Please select an video file (mp4 or webm or ogg)
+              当前仅支持视频格式：(mp4 or webm or ogg)
             </p>
           )}
         </div>

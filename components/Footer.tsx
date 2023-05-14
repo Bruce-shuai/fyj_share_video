@@ -6,7 +6,6 @@ const Footer = () => {
   useEffect(() => {
     fetchVideoList();
   }, []);
-  console.log('videoList', videoList);
   return (
     <div className="mt-6 hidden xl:block ml-3 text-white">
       <div>
