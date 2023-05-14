@@ -5,9 +5,9 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'backend',
+  title: 'indigo-turkey',
 
-  projectId: 'nte96a52',
+  projectId: 'ntn3ze0h',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],
