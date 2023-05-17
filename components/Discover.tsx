@@ -15,7 +15,7 @@ const Discover: NextPage = () => {
     'xl:border-2 hover:bg-primary hover:text-black xl:border-gray-300 px-3 py-2 rounded xl:rounded-lg flex items-center gap-2 justify-center cursor-pointer text-white';
 
   return (
-    <div className="xl:border-b-2 xl:border-gray-200 py-2 pl-3  w-full">
+    <div className="border-b-2 xl:border-gray-200 py-2 pl-3  w-full">
       <div className="flex gap-3 flex-wrap justify-center items-center">
         {topics?.map((item) => (
           <Link href={`/?topic=${item.category}`} key={item.name}>

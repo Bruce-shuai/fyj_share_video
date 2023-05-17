@@ -22,7 +22,7 @@ const Sidebar: NextPage = () => {
     'flex items-center gap-3 hover:bg-primary p-3 justify-center xl:justify-start cursor-pointer font-semibold rounded';
 
   return (
-    <div className="border-r-2 h-full">
+    <div className="border-l-2 h-full">
       <div
         className="justify-center items-center xl:hidden m-2 ml-4 mt-3 text-xl pl-3 cursor-pointer "
         onClick={() => setShowSidebar(!showSidebar)}
@@ -37,7 +37,7 @@ const Sidebar: NextPage = () => {
                 <p className="text-2xl">
                   <Image src={home} alt="logo" width={38} height={38} />
                 </p>
-                <span className="capitalize text-xl hidden xl:block text-orange-300">
+                <span className="capitalize text-xl hidden xl:block text-orange-400">
                   个人首页
                 </span>
               </div>

@@ -67,7 +67,7 @@ const VideoCard: NextPage<IProps> = ({
   }
 
   return (
-    <div className="flex flex-col border-b-2 border-gray-200 pb-6">
+    <div className="flex flex-col border-b-2 border-gray-200 pb-6 ml-4">
       <div>
         <div className="flex gap-3 p-2 cursor-pointer font-semibold rounded ">
           <div className="md:w-16 md:h-16 w-10 h-10">
@@ -76,7 +76,7 @@ const VideoCard: NextPage<IProps> = ({
                 <Image
                   width={62}
                   height={62}
-                  className=" rounded-full"
+                  className=" rounded-md"
                   src={postedBy?.image}
                   alt="user-profile"
                   layout="responsive"
@@ -90,21 +90,21 @@ const VideoCard: NextPage<IProps> = ({
               <div className="flex items-center gap-2">
                 <p className="flex gap-2 items-center md:text-md font-bold text-primary">
                   {postedBy?.userName}{' '}
-                  <GoVerified className="text-blue-400 text-md" />
+                  <GoVerified className="text-orange-400 text-md" />
                 </p>
-                <p className="capitalize font-medium text-xs text-gray-500 hidden md:block">
+                <p className="capitalize font-medium text-xs text-white hidden md:block">
                   {postedBy?.userName}
                 </p>
               </div>
             </Link>
             <Link href={`/detail/${_id}`}>
-              <p className="mt-2 font-normal ">{caption}</p>
+              <p className="mt-2 font-normal text-white">{caption}</p>
             </Link>
           </div>
         </div>
       </div>
 
-      <div className="lg:ml-20 flex gap-4 relative">
+      <div className="lg:ml-20 flex gap-4 relative justify-center items-center">
         <div
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
@@ -120,7 +120,7 @@ const VideoCard: NextPage<IProps> = ({
           </Link>
 
           {isHover && (
-            <div className="absolute bottom-6 cursor-pointer left-8 md:left-14 lg:left-0 flex gap-10 lg:justify-between w-[100px] md:w-[50px] lg:w-[600px] p-3">
+            <div className="absolute bottom-6 cursor-pointer  flex gap-10 justify-between   p-3">
               {playing ? (
                 <button onClick={onVideoPress}>
                   <BsFillPauseFill className="text-black text-2xl lg:text-4xl" />

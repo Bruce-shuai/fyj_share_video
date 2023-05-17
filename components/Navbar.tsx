@@ -46,8 +46,8 @@ const Navbar = () => {
           <input
             value={searchValue}
             onChange={(e) => setSearchValue(e.target.value)}
-            className="bg-primary p-3 md:text-md font-medium border-2 border-gray-300 focus:outline-none focus:border-2 focus:border-gray-400 w-[400px] md:w-[450px] rounded-full  md:top-0"
-            placeholder="搜索更多视频~"
+            className="bg-primary p-3 md:text-md font-medium border-2 border-gray-300 focus:outline-none focus:border-2 focus:border-gray-400 w-[400px] md:w-[450px] rounded-md  md:top-0"
+            placeholder="搜索更多~"
           />
           <button
             onClick={handleSearch}
@@ -61,9 +61,9 @@ const Navbar = () => {
         {user ? (
           <div className="flex gap-5 md:gap-10 h-12">
             <Link href="/upload">
-              <button className="border-2  md:px-4 text-md font-semibold flex items-center gap-2 rounded-md">
+              <button className="border-2  md:px-4 text-md font-semibold flex items-center gap-2 rounded-md text-orange-200">
                 <IoMdAdd className="text-xl" />{' '}
-                <span className="hidden md:block">上传 </span>
+                <span className="hidden md:block ">上传 </span>
               </button>
             </Link>
             {user?.image && (
