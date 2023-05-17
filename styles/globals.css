@@ -35,7 +35,17 @@ a {
   background-color: transparent;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'self-font';
   src: url('../utils/fonts/SanJiHuaXinJianTi-2.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: 'self-font';
+  font-weight: 400;
+  src: url('//at.alicdn.com/wf/webfont/YdOxJg0Myp4q/2uLJYX0WhM9c.woff2')
+      format('woff2'),
+    url('//at.alicdn.com/wf/webfont/YdOxJg0Myp4q/mAyiEyBIwVho.woff')
+      format('woff');
+  font-display: swap;
 }

@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import '../styles/globals.css';
+import Discover from '../components/Discover';
 
 const MyApp = ({ Component, pageProps }: AppProps) => {
   const [isSSR, setIsSSR] = useState(true);
@@ -40,14 +41,16 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
     <GoogleOAuthProvider
       clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}
     >
-      <div className="bg-[url(../utils/background.jpg)] bg-no-repeat bg-cover">
+      <div className="bg-[url(../utils/background3.jpg)] bg-no-repeat bg-cover">
         <div className="xl:w-[1200px] m-auto overflow-hidden h-[100vh] backdrop-blur-md backdrop-brightness-75">
           <Navbar />
-          <div className="flex gap-6  ">
+
+          <div className="flex  ">
             <div className="h-[92vh] overflow-hidden xl:hover:overflow-auto">
               <Sidebar />
             </div>
-            <div className="mt-4 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1 mr-4">
+            <div className="mt-1 flex flex-col gap-10 overflow-auto h-[88vh] videos flex-1 ">
+              <Discover />
               <Component {...pageProps} />
             </div>
           </div>

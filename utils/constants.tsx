@@ -1,57 +1,59 @@
-import { GiSunRadiations } from 'react-icons/gi';
-import { GiCakeSlice } from 'react-icons/gi';
-import { FaDog } from 'react-icons/fa';
-import { MdOutlineSportsSoccer } from 'react-icons/md';
-import { BiLaugh } from 'react-icons/bi';
-import { CgGames } from 'react-icons/cg';
-import { IoIosMusicalNote } from 'react-icons/io';
-import { BsCupFill } from 'react-icons/bs';
-import { MdFace } from 'react-icons/md';
+import Image from 'next/image';
+// svg
+import hot from './icons/hot.svg';
+import funny from './icons/funny.svg';
+import science from './icons/science.svg';
+import food from './icons/food.svg';
+import music from './icons/music.svg';
+import makeup from './icons/makeup.svg';
+import animal from './icons/animal.svg';
+import sport from './icons/sport.svg';
+import life from './icons/life.svg';
 
 export const topics = [
   {
     name: '热点',
     category: 'hot',
-    icon: <GiSunRadiations />,
+    icon: <Image src={hot} alt="hot" width="18" height="18" />,
   },
   {
     name: '搞笑',
     category: 'funny',
-    icon: <BiLaugh />,
+    icon: <Image src={funny} alt="hot" width="18" height="18" />,
   },
   {
     name: '科学',
     category: 'science',
-    icon: <CgGames />,
+    icon: <Image src={science} alt="hot" width="18" height="18" />,
   },
   {
     name: '美食',
     category: 'food',
-    icon: <GiCakeSlice />,
+    icon: <Image src={food} alt="hot" width="18" height="18" />,
   },
   {
     name: '音乐',
     category: 'music',
-    icon: <IoIosMusicalNote />,
+    icon: <Image src={music} alt="hot" width="18" height="18" />,
   },
   {
     name: '美妆',
     category: 'makeup',
-    icon: <MdFace />,
+    icon: <Image src={makeup} alt="hot" width="18" height="18" />,
   },
   {
     name: '动物',
     category: 'animal',
-    icon: <FaDog />,
+    icon: <Image src={animal} alt="hot" width="18" height="18" />,
   },
   {
     name: '运动',
     category: 'sport',
-    icon: <MdOutlineSportsSoccer />,
+    icon: <Image src={sport} alt="hot" width="18" height="18" />,
   },
   {
     name: '生活',
     category: 'life',
-    icon: <BsCupFill />,
+    icon: <Image src={life} alt="hot" width="18" height="18" />,
   },
 ];

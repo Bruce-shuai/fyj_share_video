@@ -2,12 +2,10 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { AiOutlineLogout } from 'react-icons/ai';
 import { BiSearch } from 'react-icons/bi';
 import { IoMdAdd } from 'react-icons/io';
-import { BsFillCameraVideoFill } from 'react-icons/bs';
 import { GoogleLogin, googleLogout } from '@react-oauth/google';
-
+import logo from '../utils/icons/logo.svg';
 import useAuthStore from '../store/authStore';
 import { IUser } from '../types';
 import { createOrGetUser } from '../utils';
@@ -33,10 +31,10 @@ const Navbar = () => {
     return src;
   };
   return (
-    <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-2 px-4">
+    <div className="w-full flex justify-between items-center border-b-2 border-gray-200 py-3 px-4">
       <Link href="/">
-        <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px]">
-          <BsFillCameraVideoFill className="fill-blue-400 hover:fill-blue-500 cursor-pointer text-4xl" />
+        <div className="w-[100px] md:w-[129px] md:h-[30px] h-[38px] -translate-y-6">
+          <Image src={logo} alt="logo" width={80} height={80} />
         </div>
       </Link>
 
@@ -61,9 +59,9 @@ const Navbar = () => {
       </div>
       <div>
         {user ? (
-          <div className="flex gap-5 md:gap-10">
+          <div className="flex gap-5 md:gap-10 h-12">
             <Link href="/upload">
-              <button className="border-2 px-2 md:px-4 text-md font-semibold flex items-center gap-2">
+              <button className="border-2  md:px-4 text-md font-semibold flex items-center gap-2 rounded-md">
                 <IoMdAdd className="text-xl" />{' '}
                 <span className="hidden md:block">上传 </span>
               </button>
@@ -72,11 +70,11 @@ const Navbar = () => {
               <Link href={`/profile/${user._id}`}>
                 <div>
                   <Image
-                    className="rounded-full cursor-pointer"
+                    className="rounded-md cursor-pointer"
                     src={user.image}
                     alt="user"
-                    width={40}
-                    height={40}
+                    width={45}
+                    height={45}
                     loader={loaderProp}
                   />
                 </div>
@@ -84,13 +82,13 @@ const Navbar = () => {
             )}
             <button
               type="button"
-              className=" border-2 p-2 rounded-full cursor-pointer outline-none shadow-md"
+              className=" border-2 p-2 rounded-md cursor-pointer outline-none shadow-md"
               onClick={() => {
                 googleLogout();
                 removeUser();
               }}
             >
-              <AiOutlineLogout color="red" fontSize={21} />
+              <Image src="/logout.png" width={24} height={24} alt="logout" />
             </button>
           </div>
         ) : (

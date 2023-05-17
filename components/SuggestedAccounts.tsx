@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { NextPage } from 'next';
 import Link from 'next/link';
 import { GoVerified } from 'react-icons/go';
-import { FiThumbsUp } from 'react-icons/fi';
+import thumb from '../utils/icons/thumb.svg';
 import { IUser } from '../types';
 
 interface IProps {
@@ -24,8 +24,8 @@ const SuggestedAccounts: NextPage<IProps> = ({ fetchAllUsers, allUsers }) => {
   };
   return (
     <div className="xl:border-b-2 border-gray-200 pb-4">
-      <p className=" font-semibold m-3 mt-4 hidden xl:flex items-center gap-1 text-blue-500">
-        <FiThumbsUp className="text-xl" />
+      <p className=" font-semibold m-3 mt-4 hidden xl:flex items-center gap-1 text-orange-200">
+        <Image src={thumb} alt="thumbs" width={30} height={30} />
         推荐用户
       </p>
       <div>
