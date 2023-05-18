@@ -50,7 +50,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               <Discover />
               <Component {...pageProps} />
             </div>
-            <div className="h-[92vh] overflow-hidden xl:hover:overflow-auto">
+            <div className="h-[92vh] overflow-hidden xl:hover:overflow-auto -z-50">
               <Sidebar />
             </div>
           </div>

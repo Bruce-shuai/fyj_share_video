@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'indigo-turkey',
 
-  projectId: 's7ffdblw',
+  projectId: 'b64lx2m5',
   dataset: 'production',
 
   plugins: [deskTool(), visionTool()],

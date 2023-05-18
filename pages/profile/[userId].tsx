@@ -21,8 +21,12 @@ const Profile = ({ data }: IProps) => {
   const [videosList, setVideosList] = useState<Video[]>([]);
 
   const { user, userVideos, userLikedVideos } = data;
-  const videos = showUserVideos ? 'border-b-2 border-black' : 'text-white';
-  const liked = !showUserVideos ? 'border-b-2 border-black' : 'text-white';
+  const videos = showUserVideos
+    ? 'border-b-2 border-orange-400 text-orange-300'
+    : 'text-orange-200';
+  const liked = !showUserVideos
+    ? 'border-b-2 border-orange-400 text-orange-300'
+    : 'text-orange-200';
 
   useEffect(() => {
     const fetchVideos = async () => {
@@ -39,8 +43,8 @@ const Profile = ({ data }: IProps) => {
     return src;
   };
   return (
-    <div className="w-full">
-      <div className="flex gap-6 md:gap-10 mb-4  w-full">
+    <div className="w-full px-4">
+      <div className="flex gap-6 md:gap-10 mb-4  w-full ">
         <div className="w-16 h-16 md:w-32 md:h-32">
           <Image
             width={120}
@@ -76,7 +80,7 @@ const Profile = ({ data }: IProps) => {
             喜欢
           </p>
         </div>
-        <div className="flex gap-6 flex-wrap md:justify-center">
+        <div className="flex gap-6 flex-wrap md:justify-center text-orange-200">
           {videosList.length > 0 ? (
             videosList.map((post: Video, idx: number) => (
               <VideoCard key={idx} post={post} />
