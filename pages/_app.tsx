@@ -42,7 +42,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
       clientId={`${process.env.NEXT_PUBLIC_GOOGLE_API_TOKEN}`}
     >
       <div className="bg-[url(../utils/background3.jpg)] bg-no-repeat bg-cover">
-        <div className="xl:w-[1200px] m-auto overflow-hidden h-[100vh] backdrop-blur-md backdrop-brightness-75">
+        <div className="xl:w-[1200px] m-auto  h-[100vh] backdrop-blur-md backdrop-brightness-75">
           <Navbar />
 
           <div className="flex  ">
